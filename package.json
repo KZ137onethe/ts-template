@@ -1,0 +1,29 @@
+{
+  "name": "ts-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "rsbuild dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.16.1",
+  "type": "module",
+  "volta": {
+    "node": "24.22.2"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^2.2.14",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
