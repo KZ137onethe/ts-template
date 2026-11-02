@@ -1,7 +1,8 @@
-const worker = new Worker(new URL('./worker.ts', import.meta.url))
+import { createApp } from "vue";
+import App from "./App.vue";
 
-worker.addEventListener("message", (e) => {
-	console.log(e.data)
-})
+const instance = createApp(App)
 
-worker.postMessage("Greeting from main.ts")
+instance.mount("#app")
+
+console.warn("当前vue版本：", instance.version)

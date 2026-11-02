@@ -1,19 +1,21 @@
 import { defineConfig } from '@rsbuild/core';
-import { join } from "node:path"
+import { pluginVue } from '@rsbuild/plugin-vue';
 
 export default defineConfig({
-	root: join(__dirname, "./src"),
 	source: {
 		entry: {
-			index: "./main.ts"
+			index: "./src/main.ts"
 		}
 	},
 	html: {
-		template: "./index.html"
+		template: "./public/index.html"
 	},
   resolve: {
     alias: {
       '@': './src',
     },
   },
+	plugins: [
+		pluginVue()
+	]
 });
