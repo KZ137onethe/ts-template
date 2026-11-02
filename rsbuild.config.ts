@@ -1,15 +1,13 @@
 import { defineConfig } from '@rsbuild/core';
-import { join } from "node:path"
 
 export default defineConfig({
-	root: join(__dirname, "./src"),
 	source: {
 		entry: {
-			index: "./main.ts"
+			index: "./src/main.ts"
 		}
 	},
 	html: {
-		template: "./index.html"
+		template: "./public/index.html"
 	},
   resolve: {
     alias: {
